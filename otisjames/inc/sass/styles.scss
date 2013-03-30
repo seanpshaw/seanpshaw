@@ -1,0 +1,50 @@
+@import "mixins";
+
+.row {
+  width: 940px;
+}
+
+// HEADER STYLES
+header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 5px solid $site-blue;
+  nav {
+    margin-top: 10px;
+    ul {
+      margin-bottom: 0;
+    }
+    li {
+      display: inline-block;
+      margin-bottom: 0;
+      a:link, a:visited {
+        @include font-sans;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-size: 1.8rem;
+        padding-left: 10px;
+        color: $site-darkgrey;
+      }
+      a:hover {
+        color: $site-blue;
+        text-decoration: none;
+      }
+      &.current-menu-item {
+        a:link, a:visited {
+          color: $site-blue;
+        }
+      }
+    }
+  }
+}
+
+// FEATURED IMAGES
+#featured-image-wrapper {
+  margin-top: 25px;
+}
+
+// FOOTER STYLES
+#footer-wrapper {
+  background: #F5F5F5;
+}

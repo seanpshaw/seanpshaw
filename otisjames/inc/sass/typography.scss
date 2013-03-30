@@ -1,0 +1,109 @@
+@import "mixins";
+
+// TYPOGRAPHY 
+
+H1, H2, H3, H4, H5, H6 {
+  line-height: normal;
+  margin: 0em;
+  color: $site-blue;
+  text-transform: uppercase;
+  @include font-sans;  
+}
+
+H1 {
+  font-size: 40px;
+  font-size: 4.0rem;
+  line-height: 40px;
+  line-height: 4.0rem;
+  text-align: center;
+}
+  
+H2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+H3 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+H4 {
+  font-size: 21px;
+  font-size: 2.1rem;
+}
+H5 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+H6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 30px;
+  line-height: 3.0rem;
+  margin: 0em 0em 15px;
+  @include font-helvetica;
+  font-weight: 400;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  font-weight: 700;
+  @include font-helvetica;
+  color: $site-blue;
+}
+
+p a:link, p a:visited {
+  line-height: normal;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#main-content, #content {
+  ul, ol {
+    margin: 0.5em 0 1.25em;
+    padding-left: 3.5em;
+    li {
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 24px;
+      line-height: 2.4rem;
+      margin: 0;
+      padding-left: 15px;
+      @include font-helvetica;
+    }
+  }
+  ol {
+    li {
+      list-style: inherit;
+    }
+  }
+  ul li {
+    list-style: disc;
+  }
+  ul {
+    ul li {
+      list-style: square;
+    }
+  }
+}
+
+hr {
+  margin: 10px 0;
+  border-top: 1px solid $site-blue;
+}
+
+img.alignleft {
+  float: left;
+  margin-right: 20px;
+}
+
+img.alignright {
+  float: left;
+  margin-right: 20px;
+}

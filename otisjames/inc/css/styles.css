@@ -1,0 +1,43 @@
+.row {
+  width: 940px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 5px solid #3c7ba8;
+}
+header nav {
+  margin-top: 10px;
+}
+header nav ul {
+  margin-bottom: 0;
+}
+header nav li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+header nav li a:link, header nav li a:visited {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding-left: 10px;
+  color: #484747;
+}
+header nav li a:hover {
+  color: #3c7ba8;
+  text-decoration: none;
+}
+header nav li.current-menu-item a:link, header nav li.current-menu-item a:visited {
+  color: #3c7ba8;
+}
+
+#featured-image-wrapper {
+  margin-top: 25px;
+}
+
+#footer-wrapper {
+  background: #F5F5F5;
+}

@@ -1,0 +1,15 @@
+/*
+THEME NAME: Otis James
+THEME URI: http://otisjames.com
+DESCRIPTION: A custom theme for Otis James
+VERSION: 1.0
+AUTHOR: Sean Shaw
+AUTHOR URI: http://seanpshaw.com
+TEMPLATE: heisenberg
+*/
+/* Import parent styles */
+
+@import url(../heisenberg/style.css);
+@import url('inc/css/typography.css');
+@import url('inc/css/styles.css');
+@import url('inc/css/mobile.css');

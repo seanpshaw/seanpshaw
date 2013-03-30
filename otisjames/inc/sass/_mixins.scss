@@ -1,0 +1,29 @@
+// COLORS
+$site-blue: #3c7ba8;
+$site-orange: #d26f00;
+$site-darkgrey: #484747;
+
+// FONTS
+@mixin font-helvetica {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin font-sans {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+@mixin font-alegrya {
+  font-family: 'Alegreya', serif;
+}
+
+@mixin uses-pie {
+  behavior: url(/wp-content/themes/scm_hardingshymanski/styles/PIE.htc);
+  position: relative;
+}
+
+@mixin border-radius($amt) {
+  -moz-border-radius: $amt;
+  -webkit-border-radius: $amt;
+  border-radius: $amt;
+  @include uses-pie;
+}
