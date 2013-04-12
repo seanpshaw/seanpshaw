@@ -74,14 +74,17 @@ add_action('wp_head', 'scm_head');
     } ?>
     <footer class="row">
       <div id="footer-left" class="grid-2 scaffold">
+        <h5>More Info</h5>
         <nav><?php wp_nav_menu( array( 'container' => 'false ', 'container_class' => 'menu', 'theme_location' => 'primary' ) ); ?></nav>
       </div>
 
       <div id="" class="grid-2 scaffold">
+        <h5>Find Us</h5>
         <?php echo $address; ?>
       </div>
 
       <div id="" class="grid-2 scaffold">
+        <h5>Connect</h5>
         <div id="links">
           <a href="<?php echo $facebook_link; ?>" target="_blank" class="facebook">Facebook</a>
           <a href="<?php echo $twitter_link; ?>" target="_blank" class="twitter">Twitter</a>
