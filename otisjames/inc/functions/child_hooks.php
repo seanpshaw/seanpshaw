@@ -41,6 +41,17 @@ add_action('wp_head', 'scm_head');
 
         <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
+
+        <?php if (is_page(array(11, 'testimonials'))) { ?>
+          <?php $loop = new WP_Query( array( 'post_type' => 'testimonials', 'posts_per_page' => -1, 'order' => 'ASC') );
+              while ( $loop->have_posts() ) : $loop->the_post();
+          ?>
+          <div id="post-<?php the_ID(); ?>" class="testimonial">
+            <?php the_content(); ?>
+            <h3 class="testimonial-title"><?php the_title(); ?></h3>
+          </div>
+          <?php endwhile; ?>
+        <?php } ?>
       </div>
     </div>
 
@@ -58,30 +69,40 @@ add_action('wp_head', 'scm_head');
   <?php  if ( function_exists( 'ot_get_option' ) ) {
       $address  = ot_get_option( 'address' );
       $facebook_link = ot_get_option( 'facebook_link' );
-      $google_link  = ot_get_option( 'google_link' );
+      $twitter_link  = ot_get_option( 'twitter_link' );
+      $email_link  = ot_get_option( 'email_link' );
     } ?>
     <footer class="row">
-      <div id="footer-left" class="grid-6 scaffold">
+      <div id="footer-left" class="grid-2 scaffold">
         <nav><?php wp_nav_menu( array( 'container' => 'false ', 'container_class' => 'menu', 'theme_location' => 'primary' ) ); ?></nav>
-        <div class="hide-on-phones">
-          <div class="copyright">&#169; 2013 Phoenix Digital Imaging. All rights reserved. <span><a href="/privacy-policy">Privacy Policy.</a></span></div>
-          <div class="credits">Site designed & devleloped by <span><a href="http://www.southcentralmedia.com" target="_blank">South Central Media.</a></span></div>
-        </div>
       </div>
 
-      <div id="footer-center" class="grid-4 scaffold">
+      <div id="" class="grid-2 scaffold">
         <?php echo $address; ?>
       </div>
 
-      <div id="footer-right" class="grid-2 scaffold">
+      <div id="" class="grid-2 scaffold">
         <div id="links">
           <a href="<?php echo $facebook_link; ?>" target="_blank" class="facebook">Facebook</a>
-          <a href="<?php echo $google_link; ?>" target="_blank" class="google-plus">Google+</a>
-        </div>
-        <div class="show-on-phones">
-          <div class="copyright">&#169; 2013 Phoenix Digital Imaging. All rights reserved. <span><a href="/privacy-policy">Privacy Policy.</a></span></div>
+          <a href="<?php echo $twitter_link; ?>" target="_blank" class="twitter">Twitter</a>
+          <a href="<?php echo $email_link; ?>" target="_blank" class="email">Email</a>
         </div>
       </div>
+
+      <div id="footer-right" class="grid-6 scaffold">
+        <div id="email-signup">
+          <h5>Cordial Dispatch</h5>
+          <p>sign up to receive regular updates on new products, special projects and offers.</p>
+          <form action="" method="post" target="_blank">
+            <input type="email" value="" name="EMAIL" class="email"  required>
+            <input type="submit" value="Subscribe" name="subscribe" class="sbutton">
+          </form>
+        </div>
+      </div>
+
+      <div id="footer-bottom" class="grid-12">
+        <div class="copyright">&#169; 2013 Otis James. All rights reserved. <span><a href="/privacy-policy">Privacy Policy.</a></span></div>
+      </div> 
     </footer>
   </div>
 

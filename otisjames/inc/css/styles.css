@@ -2,22 +2,25 @@
   width: 940px;
 }
 
-header {
+body {
+  background: url(../images/bg_body.png) repeat 0 0;
+}
+
+#header-wrapper header {
   text-align: center;
   padding: 20px 0;
-  border-bottom: 5px solid #3c7ba8;
 }
-header nav {
+#header-wrapper header nav {
   margin-top: 10px;
 }
-header nav ul {
+#header-wrapper header nav ul {
   margin-bottom: 0;
 }
-header nav li {
+#header-wrapper header nav li {
   display: inline-block;
   margin-bottom: 0;
 }
-header nav li a:link, header nav li a:visited {
+#header-wrapper header nav li a:link, #header-wrapper header nav li a:visited {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
@@ -26,18 +29,23 @@ header nav li a:link, header nav li a:visited {
   padding-left: 10px;
   color: #484747;
 }
-header nav li a:hover {
+#header-wrapper header nav li a:hover {
   color: #3c7ba8;
   text-decoration: none;
 }
-header nav li.current-menu-item a:link, header nav li.current-menu-item a:visited {
+#header-wrapper header nav li.current-menu-item a:link, #header-wrapper header nav li.current-menu-item a:visited {
   color: #3c7ba8;
 }
 
-#featured-image-wrapper {
-  margin-top: 25px;
+#main-content {
+  padding: 25px 0;
+  background: white;
 }
 
 #footer-wrapper {
-  background: #F5F5F5;
+  border-top: 5px solid #3c7ba8;
+}
+#footer-wrapper footer {
+  margin-top: 20px;
+  padding-bottom: 20px;
 }

@@ -4,35 +4,40 @@
   width: 940px;
 }
 
+body {
+  background: url(../images/bg_body.png) repeat 0 0;
+}
+
 // HEADER STYLES
-header {
-  text-align: center;
-  padding: 20px 0;
-  border-bottom: 5px solid $site-blue;
-  nav {
-    margin-top: 10px;
-    ul {
-      margin-bottom: 0;
-    }
-    li {
-      display: inline-block;
-      margin-bottom: 0;
-      a:link, a:visited {
-        @include font-sans;
-        font-weight: 800;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-size: 1.8rem;
-        padding-left: 10px;
-        color: $site-darkgrey;
+#header-wrapper {
+  header {
+    text-align: center;
+    padding: 20px 0;
+    nav {
+      margin-top: 10px;
+      ul {
+        margin-bottom: 0;
       }
-      a:hover {
-        color: $site-blue;
-        text-decoration: none;
-      }
-      &.current-menu-item {
+      li {
+        display: inline-block;
+        margin-bottom: 0;
         a:link, a:visited {
+          @include font-sans;
+          font-weight: 800;
+          text-transform: uppercase;
+          font-size: 18px;
+          font-size: 1.8rem;
+          padding-left: 10px;
+          color: $site-darkgrey;
+        }
+        a:hover {
           color: $site-blue;
+          text-decoration: none;
+        }
+        &.current-menu-item {
+          a:link, a:visited {
+            color: $site-blue;
+          }
         }
       }
     }
@@ -41,10 +46,20 @@ header {
 
 // FEATURED IMAGES
 #featured-image-wrapper {
-  margin-top: 25px;
+
+}
+
+// MAIN CONTENT 
+#main-content {
+  padding: 25px 0;
+  background: white;
 }
 
 // FOOTER STYLES
 #footer-wrapper {
-  background: #F5F5F5;
+  border-top: 5px solid $site-blue;
+  footer {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
 }

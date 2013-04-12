@@ -15,7 +15,7 @@
   </div>
   <h1><?php echo get_the_title(15); ?> </h1>
   <div class="row">
-    <div class="content-left grid-8 scaffold">
+    <div class="content-left grid-12 scaffold">
       <div id="content-area" class="clearfix">
         <h3>News & Announcements</h3>
         <div id="post-entries">
@@ -38,37 +38,5 @@
 
       </div>
     </div>
-  
-    <!-- begin sidebar -->
-    <div id="sidebar-second-wrapper"  class="grid-4 scaffold">
-      <div id="sidebar-second-inner">
-        
-        <h3>Calendar & Events</h3>
-        <?php $loop = new WP_Query( array( 'post_type' => 'callouts', 'tag' => 'news-page', 'order' => 'ASC') );
-            while ( $loop->have_posts() ) : $loop->the_post();
-          ?>
-          <div id="post-<?php the_ID(); ?>">
-            <?php the_content(); ?>
-          </div>
-        <?php endwhile; ?>
-
-      </div>
-    </div>
-    <!-- end sidebar -->
-    <?php
-      $posts = get_field('page_relationships'); // THIS IS FOR THE BOTTOM BUTTONS
-      if( $posts ):  
-    ?>
-    <div class="big-button-section">
-      <hr />
-      <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT)
-      setup_postdata($post);   
-        the_content(); 
-      endforeach; ?>
-    </div>
-    
-  <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly 
-    endif; 
-  ?>
   </div>
 </div>
