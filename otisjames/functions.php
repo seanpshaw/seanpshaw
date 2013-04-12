@@ -24,6 +24,7 @@ add_action( 'wp_enqueue_scripts', 'otis_scripts' );
 
 if (function_exists('register_nav_menu')) {
   register_nav_menu('primary', __('Primary Menu'));
+  register_nav_menu('footer', __('Footer Menu'));
 }
 
 //////////// WYSIWYG /////////////

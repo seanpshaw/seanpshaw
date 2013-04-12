@@ -48,4 +48,79 @@ body {
 #footer-wrapper footer {
   margin-top: 20px;
   padding-bottom: 20px;
+  text-transform: lowercase;
+}
+#footer-wrapper li {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+}
+#footer-wrapper a:link, #footer-wrapper a:visited {
+  color: #484747;
+}
+#footer-wrapper a.facebook, #footer-wrapper a.twitter, #footer-wrapper a.email {
+  display: inline-block;
+  background: url(../images/sprite_icons.png) no-repeat 0 0;
+  height: 32px;
+  width: 32px;
+  margin-right: 5px;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+#footer-wrapper a.facebook:hover, #footer-wrapper a.twitter:hover, #footer-wrapper a.email:hover {
+  background-position: 0 -34px;
+}
+#footer-wrapper a.twitter {
+  background-position: -38px 0;
+}
+#footer-wrapper a.twitter:hover {
+  background-position: -38px -34px;
+}
+#footer-wrapper a.email {
+  background-position: -75px 0;
+}
+#footer-wrapper a.email:hover {
+  background-position: -75px -34px;
+}
+#footer-wrapper #email-signup {
+  max-width: 300px;
+}
+#footer-wrapper #email-signup input.email {
+  width: 70%;
+  height: 23px;
+  border: 1px solid #cccccc;
+  padding-left: 5px;
+}
+#footer-wrapper #email-signup input.sbutton {
+  width: 25%;
+  height: 25px;
+  background: #3c7ba8;
+  text-transform: lowercase;
+  top: -1px;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  border: 1px solid #5192c1;
+}
+#footer-wrapper #email-signup input.sbutton:hover {
+  background: #5192c1;
+}
+#footer-wrapper .footer-module h5 {
+  margin-bottom: 10px;
+}
+#footer-wrapper .footer-module p {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+}
+
+#footer-bottom {
+  clear: left;
+  text-align: center;
+  font-size: 11px;
+  font-size: 1.1rem;
 }

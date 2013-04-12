@@ -61,5 +61,82 @@ body {
   footer {
     margin-top: 20px;
     padding-bottom: 20px;
+    text-transform: lowercase;
   }
+  li {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  a:link, a:visited {
+    color: $site-darkgrey;
+  }
+  a.facebook, a.twitter, a.email {
+    display: inline-block;
+    background: url(../images/sprite_icons.png) no-repeat 0 0;
+    height: 32px;
+    width: 32px;
+    margin-right: 5px;
+    text-indent: -1000px;
+    overflow: hidden;
+    &:hover {
+      background-position: 0 -34px;
+    }
+  }
+  a.twitter {
+    background-position: -38px 0;
+    &:hover {
+      background-position: -38px -34px;
+    }
+  }
+  a.email {
+    background-position: -75px 0;
+    &:hover {
+      background-position: -75px -34px;
+    }
+  }
+  #email-signup {
+    max-width: 300px;
+    input.email {
+      width: 70%;
+      height: 23px;
+      border: 1px solid #ccc;
+      padding-left: 5px;
+    }
+    input.sbutton {
+      width: 25%;
+      height: 25px;
+      background: $site-blue;
+      text-transform: lowercase;
+      top: -1px;
+      cursor: pointer;
+      position: relative;
+      color: white;
+      @include font-sans;
+      border: 1px solid lighten($site-blue, 9%);
+      &:hover {
+        background: lighten($site-blue, 9%);
+      }
+    }
+  }
+  .footer-module {
+    h5 {
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+      font-size: 1.2rem;
+      line-height: 18px;
+      line-height: 1.8rem;
+    }
+  }
+}
+
+#footer-bottom {
+  clear: left;
+  text-align: center;
+  font-size: 11px;
+  font-size: 1.1rem;
 }

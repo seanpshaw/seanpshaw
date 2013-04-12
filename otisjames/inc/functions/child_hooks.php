@@ -73,18 +73,18 @@ add_action('wp_head', 'scm_head');
       $email_link  = ot_get_option( 'email_link' );
     } ?>
     <footer class="row">
-      <div id="footer-left" class="grid-2 scaffold">
-        <h5>More Info</h5>
-        <nav><?php wp_nav_menu( array( 'container' => 'false ', 'container_class' => 'menu', 'theme_location' => 'primary' ) ); ?></nav>
+      <div id="footer-left" class="grid-2 scaffold footer-module">
+        <h5>More Info:</h5>
+        <nav><?php wp_nav_menu( array( 'container' => 'false ', 'container_class' => 'menu', 'theme_location' => 'footer' ) ); ?></nav>
       </div>
 
-      <div id="" class="grid-2 scaffold">
-        <h5>Find Us</h5>
+      <div id="" class="grid-2 scaffold footer-module">
+        <h5>Find Us:</h5>
         <?php echo $address; ?>
       </div>
 
-      <div id="" class="grid-2 scaffold">
-        <h5>Connect</h5>
+      <div id="" class="grid-3 scaffold footer-module">
+        <h5>Connect:</h5>
         <div id="links">
           <a href="<?php echo $facebook_link; ?>" target="_blank" class="facebook">Facebook</a>
           <a href="<?php echo $twitter_link; ?>" target="_blank" class="twitter">Twitter</a>
@@ -92,9 +92,9 @@ add_action('wp_head', 'scm_head');
         </div>
       </div>
 
-      <div id="footer-right" class="grid-6 scaffold">
+      <div id="footer-right" class="grid-5 scaffold footer-module">
         <div id="email-signup">
-          <h5>Cordial Dispatch</h5>
+          <h5>Cordial Dispatch:</h5>
           <p>sign up to receive regular updates on new products, special projects and offers.</p>
           <form action="" method="post" target="_blank">
             <input type="email" value="" name="EMAIL" class="email"  required>
