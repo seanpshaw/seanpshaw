@@ -1,17 +1,19 @@
 H1, H2, H3, H4, H5, H6 {
   line-height: normal;
   margin: 0em;
-  color: #3c7ba8;
-  text-transform: uppercase;
+  color: #484747;
+  text-transform: lowercase;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 H1 {
-  font-size: 40px;
-  font-size: 4.0rem;
-  line-height: 40px;
-  line-height: 4.0rem;
+  font-size: 33px;
+  font-size: 3.3rem;
+  line-height: 33px;
+  line-height: 3.3rem;
   text-align: center;
+  padding: 10px 0 5px;
+  margin-bottom: 10px;
 }
 
 H2 {
