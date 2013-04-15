@@ -16,7 +16,7 @@ add_action('wp_head', 'scm_head');
       <div id="logo">
         <a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('stylesheet_directory'); ?>/inc/images/logo.png" alt="Home"></a>
       </div>
-      <nav class="hide-on-phones"><?php wp_nav_menu( array( 'container' => 'false ', 'container_class' => 'menu', 'theme_location' => 'primary' ) ); ?></nav>
+      <nav><?php wp_nav_menu( array( 'container' => 'false ', 'container_class' => 'menu', 'theme_location' => 'primary' ) ); ?></nav>
     </header>
   </div>
 
@@ -43,14 +43,19 @@ add_action('wp_head', 'scm_head');
         <?php the_content(); ?>
 
         <?php if (is_page(array(11, 'testimonials'))) { ?>
-          <?php $loop = new WP_Query( array( 'post_type' => 'testimonials', 'posts_per_page' => -1, 'order' => 'ASC') );
-              while ( $loop->have_posts() ) : $loop->the_post();
-          ?>
-          <div id="post-<?php the_ID(); ?>" class="testimonial">
-            <?php the_content(); ?>
-            <h3 class="testimonial-title"><?php the_title(); ?></h3>
+          <div id="testimonials-wrapper">
+            <?php $i = 0; ?>
+            <?php $loop = new WP_Query( array( 'post_type' => 'testimonials', 'tag' => 'featured', 'posts_per_page' => -1, 'order' => 'ASC') );
+                while ( $loop->have_posts() ) : $loop->the_post();
+            ?>
+            <?php $i++; ?>
+            <div id="post-<?php the_ID(); ?>" class="testimonial<?php if ($i % 2 == 0) { echo " last"; } ?>">
+              <?php the_content(); ?>
+              <h3 class="testimonial-title"><?php the_title(); ?></h3>
+            </div>
+            <?php endwhile; ?>
+            <a href="#" class="archive-link">View All Testimonials</a> 
           </div>
-          <?php endwhile; ?>
         <?php } ?>
       </div>
     </div>
@@ -104,7 +109,8 @@ add_action('wp_head', 'scm_head');
       </div>
 
       <div id="footer-bottom" class="grid-12">
-        <div class="copyright">&#169; 2013 Otis James. All rights reserved. <span><a href="/privacy-policy">Privacy Policy.</a></span></div>
+        <div class="copyright">&#169; 2013 Otis James. All rights reserved. <span><a href="/privacy-policy">Privacy Policy.</a></span>
+        <span> | site by <a href="http://seanpshaw.com" target="_blank">Sean Shaw</a></div>
       </div> 
     </footer>
   </div>

@@ -1,7 +1,12 @@
 @import "mixins";
 
 .row {
-  width: 940px;
+  max-width: 940px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -53,6 +58,31 @@ body {
 #main-content {
   padding: 25px 0;
   background: white;
+}
+
+// TESTIMONIALS 
+#testimonials-wrapper {
+  text-align: center;
+  .testimonial {
+    display: inline-block;
+    width: 45%;
+    margin-right: 2%;
+    vertical-align: top;
+    margin-bottom: 25px;
+    background: url(../images/bg_body.png) repeat 0 0;
+    min-height: 85px;
+    padding: 15px;
+    &.last {
+      margin-right: 0;
+    }
+  }
+  h3 {
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-align: right;
+    font-style: italic;
+    color: $site-blue;
+  }
 }
 
 // FOOTER STYLES
@@ -132,6 +162,9 @@ body {
       line-height: 1.8rem;
     }
   }
+  #footer-right {
+    margin-bottom: 10px;
+  }
 }
 
 #footer-bottom {
@@ -139,4 +172,6 @@ body {
   text-align: center;
   font-size: 11px;
   font-size: 1.1rem;
+  padding-top: 5px;
+  border-top: 1px solid #aaa;
 }
