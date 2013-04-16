@@ -85,4 +85,47 @@ function post_type_testimonials() {
 }
 add_action('init', 'post_type_testimonials'); // Change to match custom content name
 
+// TESTIMONIALS ////////////////////
+
+function post_type_press() {
+
+   register_post_type(
+               'press',
+               array('label' => __('Press Article'),
+                       'singular_label' => __('Press Article'),
+                       'public' => true,
+                       'rewrite' => array('slug' => 'press'), // modify the page slug / permalink
+                       'show_ui' => true,
+                       'capability_type' => 'post',
+                       'hierarchical' => false, //it means we cannot have parent and sub pages
+                       'query_var' => false,
+                       'exclude_from_search' => true,
+                       'supports' => array(
+                                           'title', // entry title
+                                           'thumbnail', // featured image
+                                           'editor', //standard wysywig editor
+                                           'page-attributes'),
+                       'labels' => array(
+                                           'name' => __( 'Press Articles' ),
+                                           'singular_name' => __( 'Press Article' ),
+                                           'add_new' => __( 'Add New' ),
+                                           'add_new_item' => __( 'Add New Press Article' ),
+                                           'edit' => __( 'Edit' ),
+                                           'edit_item' => __( 'Edit Press Article' ),
+                                           'new_item' => __( 'New Press Article' ),
+                                           'view' => __( 'View Press Articles' ),
+                                           'view_item' => __( 'View Press Article' ),
+                                           'search_items' => __( 'Search Press Articles' ),
+                                           'not_found' => __( 'No Press Article Found' ),
+                                           'not_found_in_trash' => __( 'No Press Articles Found in Trash' ),
+                                           'parent' => __( 'Parent Press Article' )
+                       )
+               )
+
+   );
+
+   register_taxonomy_for_object_type('post_tag', 'press'); // Change to match custom content name
+}
+add_action('init', 'post_type_press'); // Change to match custom content name
+
 ?>

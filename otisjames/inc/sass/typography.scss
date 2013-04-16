@@ -19,6 +19,12 @@ H1 {
   padding: 10px 0 5px;
   margin-bottom: 10px;
 }
+
+body.home {
+  h1 {
+    display: none;
+  }
+}
   
 H2 {
   font-size: 24px;
@@ -27,6 +33,7 @@ H2 {
 H3 {
   font-size: 22px;
   font-size: 2.2rem;
+  color: $site-blue;
 }
 H4 {
   font-size: 21px;

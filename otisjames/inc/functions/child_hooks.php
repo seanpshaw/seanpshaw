@@ -57,6 +57,25 @@ add_action('wp_head', 'scm_head');
             <a href="#" class="archive-link">View All Testimonials</a> 
           </div>
         <?php } ?>
+
+        <?php if (is_page(array(251, 'press'))) { ?>
+          <div id="press-wrapper">
+            <?php $i = 0; ?>
+            <?php $loop = new WP_Query( array( 'post_type' => 'press', 'posts_per_page' => -1, 'order' => 'DESC') );
+                while ( $loop->have_posts() ) : $loop->the_post();
+            ?>
+            <?php $i++; ?>
+            <div id="post-<?php the_ID(); ?>" class="press<?php if ($i % 3 == 0) { echo " last"; } ?>">
+              <div id="featured-image-wrapper">
+                <?php if(has_post_thumbnail()) {
+                  the_post_thumbnail(); 
+                } ?>
+              </div>
+              <?php the_content(); ?>
+            </div>
+            <?php endwhile; ?>
+          </div>
+        <?php } ?>
       </div>
     </div>
 
@@ -110,7 +129,7 @@ add_action('wp_head', 'scm_head');
 
       <div id="footer-bottom" class="grid-12">
         <div class="copyright">&#169; 2013 Otis James. All rights reserved. <span><a href="/privacy-policy">Privacy Policy.</a></span>
-        <span> | site by <a href="http://seanpshaw.com" target="_blank">Sean Shaw</a></div>
+        <span> | site by Sean Shaw</div>
       </div> 
     </footer>
   </div>

@@ -11,19 +11,19 @@
       endif;
       endwhile; else: endif;  wp_reset_query(); 
     ?>
-    <div id="overlay"></div>
   </div>
-  <h1><?php echo get_the_title(15); ?> </h1>
+  <h1><?php echo get_the_title(9); ?> </h1>
   <div class="row">
-    <div class="content-left grid-12 scaffold">
+    <div class="content-left grid-8 scaffold">
       <div id="content-area" class="clearfix">
-        <h3>News & Announcements</h3>
         <div id="post-entries">
           <?php if (have_posts()) : while (have_posts()) : the_post(); 
           if( $post->ID == $do_not_duplicate ) continue; update_post_caches($posts); ?>
           <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-            <h5 class="storytitle"><?php the_title(); ?></h5>
-            <span class="blog-date"><?php the_time('n.j.y'); ?></span>
+            <div class="meta clearfix">
+              <h5 class="storytitle"><?php the_title(); ?></h5>
+              <span class="blog-date"><?php the_time('F j, Y'); ?></span>
+            </div>
             <div class="storycontent clearfix">
               <?php the_content(); ?>
             </div>
