@@ -17,7 +17,9 @@ body {
 #header-wrapper {
   header {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0 15px;
+    border-bottom: 1px solid $site-darkgrey;
+    margin-bottom: 20px;
     nav {
       margin-top: 10px;
       ul {
@@ -27,12 +29,12 @@ body {
         display: inline-block;
         margin-bottom: 0;
         a:link, a:visited {
-          @include font-sans;
+          @include font-courier;
           font-weight: 800;
           text-transform: uppercase;
           font-size: 18px;
           font-size: 1.8rem;
-          padding-left: 15px;
+          padding-left: 30px;
           color: $site-darkgrey;
         }
         &:first-child {
@@ -41,12 +43,12 @@ body {
           }
         }
         a:hover {
-          color: $site-blue;
+          color: $site-red;
           text-decoration: none;
         }
         &.current-menu-item {
           a:link, a:visited {
-            color: $site-blue;
+            color: $site-red;
           }
         }
       }
@@ -61,8 +63,7 @@ body {
 
 // MAIN CONTENT 
 #main-content {
-  padding: 25px 0;
-  background: white;
+  padding: 0px 0 25px;
 }
 
 // PRESS PAGE
@@ -102,7 +103,7 @@ body {
     font-size: 1.4rem;
     text-align: right;
     font-style: italic;
-    color: $site-blue;
+    color: $site-red;
   }
 }
 
@@ -132,16 +133,17 @@ body.blog {
   .blog-date {
     float: right;
     margin-top: 3px;
+    @include font-courier;
   }
 }
 
 // FOOTER STYLES
 #footer-wrapper {
-  border-top: 5px solid $site-blue;
   footer {
-    margin-top: 20px;
+    padding-top: 20px;
     padding-bottom: 20px;
     text-transform: lowercase;
+    border-top: 1px solid $site-darkgrey;
   }
   li {
     margin-bottom: 0;
@@ -188,16 +190,16 @@ body.blog {
     input.sbutton {
       width: 25%;
       height: 25px;
-      background: $site-blue;
+      background: $site-red;
       text-transform: lowercase;
       top: -1px;
       cursor: pointer;
       position: relative;
       color: white;
-      @include font-sans;
-      border: 1px solid lighten($site-blue, 9%);
+      @include font-courier;
+      border: 1px solid lighten($site-red, 9%);
       &:hover {
-        background: lighten($site-blue, 9%);
+        background: lighten($site-red, 9%);
       }
     }
   }
@@ -212,8 +214,12 @@ body.blog {
       line-height: 1.8rem;
     }
   }
+  #footer-middle-left {
+    width: 15%;
+  }
   #footer-right {
     margin-bottom: 10px;
+    margin-left: 2.2%;
   }
 }
 
@@ -222,6 +228,5 @@ body.blog {
   text-align: center;
   font-size: 11px;
   font-size: 1.1rem;
-  padding-top: 5px;
-  border-top: 1px solid #aaa;
+  @include font-courier;
 }

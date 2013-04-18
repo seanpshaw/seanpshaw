@@ -13,7 +13,9 @@ body {
 
 #header-wrapper header {
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 0 15px;
+  border-bottom: 1px solid #484747;
+  margin-bottom: 20px;
 }
 #header-wrapper header nav {
   margin-top: 10px;
@@ -26,28 +28,27 @@ body {
   margin-bottom: 0;
 }
 #header-wrapper header nav li a:link, #header-wrapper header nav li a:visited {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 18px;
   font-size: 1.8rem;
-  padding-left: 15px;
+  padding-left: 30px;
   color: #484747;
 }
 #header-wrapper header nav li:first-child a:link, #header-wrapper header nav li:first-child a:visited {
   padding-left: 0px;
 }
 #header-wrapper header nav li a:hover {
-  color: #3c7ba8;
+  color: #621f3e;
   text-decoration: none;
 }
 #header-wrapper header nav li.current-menu-item a:link, #header-wrapper header nav li.current-menu-item a:visited {
-  color: #3c7ba8;
+  color: #621f3e;
 }
 
 #main-content {
-  padding: 25px 0;
-  background: white;
+  padding: 0px 0 25px;
 }
 
 .press {
@@ -86,7 +87,7 @@ body {
   font-size: 1.4rem;
   text-align: right;
   font-style: italic;
-  color: #3c7ba8;
+  color: #621f3e;
 }
 
 body.blog .row .grid-8 {
@@ -113,15 +114,14 @@ body.blog .row .grid-8 {
 .post .blog-date {
   float: right;
   margin-top: 3px;
+  font-family: "Courier New", Courier, monospace;
 }
 
-#footer-wrapper {
-  border-top: 5px solid #3c7ba8;
-}
 #footer-wrapper footer {
-  margin-top: 20px;
+  padding-top: 20px;
   padding-bottom: 20px;
   text-transform: lowercase;
+  border-top: 1px solid #484747;
 }
 #footer-wrapper li {
   margin-bottom: 0;
@@ -169,17 +169,17 @@ body.blog .row .grid-8 {
 #footer-wrapper #email-signup input.sbutton {
   width: 25%;
   height: 25px;
-  background: #3c7ba8;
+  background: #621f3e;
   text-transform: lowercase;
   top: -1px;
   cursor: pointer;
   position: relative;
   color: white;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  border: 1px solid #5192c1;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid #852a54;
 }
 #footer-wrapper #email-signup input.sbutton:hover {
-  background: #5192c1;
+  background: #852a54;
 }
 #footer-wrapper .footer-module h5 {
   margin-bottom: 10px;
@@ -190,8 +190,12 @@ body.blog .row .grid-8 {
   line-height: 18px;
   line-height: 1.8rem;
 }
+#footer-wrapper #footer-middle-left {
+  width: 15%;
+}
 #footer-wrapper #footer-right {
   margin-bottom: 10px;
+  margin-left: 2.2%;
 }
 
 #footer-bottom {
@@ -199,6 +203,5 @@ body.blog .row .grid-8 {
   text-align: center;
   font-size: 11px;
   font-size: 1.1rem;
-  padding-top: 5px;
-  border-top: 1px solid #aaaaaa;
+  font-family: "Courier New", Courier, monospace;
 }

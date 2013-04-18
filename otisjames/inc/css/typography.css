@@ -3,7 +3,7 @@ H1, H2, H3, H4, H5, H6 {
   margin: 0em;
   color: #484747;
   text-transform: lowercase;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Courier New", Courier, monospace;
 }
 
 H1 {
@@ -28,7 +28,7 @@ H2 {
 H3 {
   font-size: 22px;
   font-size: 2.2rem;
-  color: #3c7ba8;
+  color: #621f3e;
 }
 
 H4 {
@@ -52,15 +52,15 @@ p {
   line-height: 22px;
   line-height: 2.2rem;
   margin: 0em 0em 15px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 400;
 }
 
 a:link, a:visited {
   text-decoration: none;
   font-weight: 700;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #3c7ba8;
+  font-family: "Courier New", Courier, monospace;
+  color: #621f3e;
 }
 
 p a:link, p a:visited {
@@ -82,7 +82,7 @@ a:hover {
   line-height: 2.4rem;
   margin: 0;
   padding-left: 15px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Courier New", Courier, monospace;
 }
 #main-content ol li, #content ol li {
   list-style: inherit;
@@ -96,7 +96,7 @@ a:hover {
 
 hr {
   margin: 10px 0;
-  border-top: 1px solid #3c7ba8;
+  border-top: 1px solid #621f3e;
 }
 
 img.alignleft {

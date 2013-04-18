@@ -7,7 +7,7 @@ H1, H2, H3, H4, H5, H6 {
   margin: 0em;
   color: $site-darkgrey;
   text-transform: lowercase;
-  @include font-sans;  
+  @include font-courier;  
 }
 
 H1 {
@@ -33,7 +33,7 @@ H2 {
 H3 {
   font-size: 22px;
   font-size: 2.2rem;
-  color: $site-blue;
+  color: $site-red;
 }
 H4 {
   font-size: 21px;
@@ -54,15 +54,15 @@ p {
   line-height: 22px;
   line-height: 2.2rem;
   margin: 0em 0em 15px;
-  @include font-helvetica;
+  @include font-courier;
   font-weight: 400;
 }
 
 a:link, a:visited {
   text-decoration: none;
   font-weight: 700;
-  @include font-helvetica;
-  color: $site-blue;
+  @include font-courier;
+  color: $site-red;
 }
 
 p a:link, p a:visited {
@@ -84,7 +84,7 @@ a:hover {
       line-height: 2.4rem;
       margin: 0;
       padding-left: 15px;
-      @include font-helvetica;
+      @include font-courier;
     }
   }
   ol {
@@ -104,7 +104,7 @@ a:hover {
 
 hr {
   margin: 10px 0;
-  border-top: 1px solid $site-blue;
+  border-top: 1px solid $site-red;
 }
 
 img.alignleft {

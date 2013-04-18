@@ -102,12 +102,12 @@ add_action('wp_head', 'scm_head');
         <nav><?php wp_nav_menu( array( 'container' => 'false ', 'container_class' => 'menu', 'theme_location' => 'footer' ) ); ?></nav>
       </div>
 
-      <div id="" class="grid-2 scaffold footer-module">
+      <div id="footer-middle-left" class="grid-2 scaffold footer-module">
         <h5>Find Us:</h5>
         <?php echo $address; ?>
       </div>
 
-      <div id="" class="grid-3 scaffold footer-module">
+      <div id="footer-middle-right" class="grid-3 scaffold footer-module">
         <h5>Connect:</h5>
         <div id="links">
           <a href="<?php echo $facebook_link; ?>" target="_blank" class="facebook">Facebook</a>

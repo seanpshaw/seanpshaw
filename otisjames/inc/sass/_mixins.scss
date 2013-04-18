@@ -1,5 +1,5 @@
 // COLORS
-$site-blue: #3c7ba8;
+$site-red: #621f3e;
 $site-orange: #d26f00;
 $site-darkgrey: #484747;
 
@@ -12,8 +12,8 @@ $site-darkgrey: #484747;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-@mixin font-alegrya {
-  font-family: 'Alegreya', serif;
+@mixin font-courier {
+  font-family: "Courier New", Courier, monospace;
 }
 
 @mixin uses-pie {

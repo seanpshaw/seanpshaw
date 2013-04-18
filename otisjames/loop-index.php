@@ -14,7 +14,7 @@
   </div>
   <h1><?php echo get_the_title(9); ?> </h1>
   <div class="row">
-    <div class="content-left grid-8 scaffold">
+    <div class="content-left grid-8 centered scaffold">
       <div id="content-area" class="clearfix">
         <div id="post-entries">
           <?php if (have_posts()) : while (have_posts()) : the_post(); 
