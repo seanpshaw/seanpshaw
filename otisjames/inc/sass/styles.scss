@@ -15,11 +15,11 @@ body {
 
 // HEADER STYLES
 #header-wrapper {
+  border-bottom: 1px solid $site-darkgrey;
+  margin-bottom: 20px;
   header {
     text-align: center;
-    padding: 20px 0 15px;
-    border-bottom: 1px solid $site-darkgrey;
-    margin-bottom: 20px;
+    padding: 20px 0 5px;
     nav {
       margin-top: 10px;
       ul {
@@ -31,10 +31,9 @@ body {
         a:link, a:visited {
           @include font-courier;
           font-weight: 800;
-          text-transform: uppercase;
           font-size: 18px;
           font-size: 1.8rem;
-          padding-left: 30px;
+          padding-left: 50px;
           color: $site-darkgrey;
         }
         &:first-child {
@@ -139,11 +138,11 @@ body.blog {
 
 // FOOTER STYLES
 #footer-wrapper {
+  border-top: 1px solid $site-darkgrey;
   footer {
     padding-top: 20px;
     padding-bottom: 20px;
     text-transform: lowercase;
-    border-top: 1px solid $site-darkgrey;
   }
   li {
     margin-bottom: 0;
@@ -215,7 +214,10 @@ body.blog {
     }
   }
   #footer-middle-left {
-    width: 15%;
+    width: 16%;
+  }
+  #footer-middle-right {
+    width: 20.68%;
   }
   #footer-right {
     margin-bottom: 10px;
