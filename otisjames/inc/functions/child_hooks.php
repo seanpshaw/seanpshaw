@@ -1,5 +1,5 @@
 <?php function scm_head() { ?>
-  <link rel="shortcut icon" href="<?php echo bloginfo('stylesheet_directory'); ?>/inc/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="<?php echo bloginfo('stylesheet_directory'); ?>/inc/images/favicon.png" type="image/x-icon" />
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,700,800|Alegreya:400,700' rel='stylesheet' type='text/css'>
 <?php }
 
