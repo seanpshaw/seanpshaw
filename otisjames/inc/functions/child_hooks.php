@@ -94,6 +94,7 @@ add_action('wp_head', 'scm_head');
       $address  = ot_get_option( 'address' );
       $facebook_link = ot_get_option( 'facebook_link' );
       $twitter_link  = ot_get_option( 'twitter_link' );
+      $instagram_link  = ot_get_option( 'instagram_link' );
       $email_link  = ot_get_option( 'email_link' );
     } ?>
     <footer class="row">
@@ -112,7 +113,8 @@ add_action('wp_head', 'scm_head');
         <div id="links">
           <a href="<?php echo $facebook_link; ?>" target="_blank" class="facebook">Facebook</a>
           <a href="<?php echo $twitter_link; ?>" target="_blank" class="twitter">Twitter</a>
-          <a href="<?php echo $email_link; ?>" target="_blank" class="email">Email</a>
+          <a href="<?php echo $instagram_link; ?>" target="_blank" class="instagram">Instagram</a>
+          <a href="mailto:<?php echo $email_link; ?>" class="email">Email</a>
         </div>
       </div>
 
