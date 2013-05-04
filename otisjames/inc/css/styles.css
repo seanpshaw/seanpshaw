@@ -11,6 +11,10 @@ body {
   background: url(../images/bg_body.png) repeat 0 0;
 }
 
+#header-wrapper, .main-wrapper, #footer-wrapper {
+  min-width: 960px;
+}
+
 #header-wrapper {
   border-bottom: 1px solid #484747;
   margin-bottom: 20px;
@@ -41,11 +45,11 @@ body {
   padding-left: 0px;
 }
 #header-wrapper header nav li a:hover {
-  color: #621f3e;
+  color: #4a0101;
   text-decoration: none;
 }
 #header-wrapper header nav li.current-menu-item a:link, #header-wrapper header nav li.current-menu-item a:visited {
-  color: #621f3e;
+  color: #4a0101;
 }
 
 #main-content {
@@ -88,7 +92,7 @@ body {
   font-size: 1.4rem;
   text-align: right;
   font-style: italic;
-  color: #621f3e;
+  color: #4a0101;
 }
 
 body.blog .row .grid-8 {
@@ -178,17 +182,17 @@ body.blog .row .grid-8 {
 #footer-wrapper #email-signup input.sbutton {
   width: 25%;
   height: 25px;
-  background: #621f3e;
+  background: #4a0101;
   text-transform: lowercase;
   top: -1px;
   cursor: pointer;
   position: relative;
   color: white;
   font-family: "Courier New", Courier, monospace;
-  border: 1px solid #852a54;
+  border: 1px solid #770202;
 }
 #footer-wrapper #email-signup input.sbutton:hover {
-  background: #852a54;
+  background: #770202;
 }
 #footer-wrapper .footer-module h5 {
   margin-bottom: 10px;

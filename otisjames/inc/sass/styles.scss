@@ -13,6 +13,10 @@ body {
   background: url(../images/bg_body.png) repeat 0 0;
 }
 
+#header-wrapper, .main-wrapper, #footer-wrapper {
+  min-width: 960px;
+}
+
 // HEADER STYLES
 #header-wrapper {
   border-bottom: 1px solid $site-darkgrey;

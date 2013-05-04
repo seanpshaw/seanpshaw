@@ -22,7 +22,7 @@ add_action('wp_head', 'scm_head');
 
 <?php } ?>
 <?php function scm_main_class_filter() {
-  echo " ";
+  echo "main-wrapper";
 } ?>
 <?php function scm_loop_page_content() { ?>
 
@@ -89,7 +89,7 @@ add_action('wp_head', 'scm_head');
 
 <?php } ?>
 <?php function scm_footer() { ?>
-  <div id="footer-wrapper">
+  <div id="footer-wrapper" class="container">
   <?php  if ( function_exists( 'ot_get_option' ) ) {
       $address  = ot_get_option( 'address' );
       $facebook_link = ot_get_option( 'facebook_link' );

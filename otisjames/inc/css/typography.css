@@ -28,7 +28,7 @@ H2 {
 H3 {
   font-size: 22px;
   font-size: 2.2rem;
-  color: #621f3e;
+  color: #4a0101;
 }
 
 H4 {
@@ -60,7 +60,7 @@ a:link, a:visited {
   text-decoration: none;
   font-weight: 700;
   font-family: "Courier New", Courier, monospace;
-  color: #621f3e;
+  color: #4a0101;
 }
 
 p a:link, p a:visited {
@@ -96,7 +96,7 @@ a:hover {
 
 hr {
   margin: 10px 0;
-  border-top: 1px solid #621f3e;
+  border-top: 1px solid #4a0101;
 }
 
 img.alignleft {
