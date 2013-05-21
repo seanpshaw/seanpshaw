@@ -51,7 +51,7 @@ function post_type_testimonials() {
                array('label' => __('Testimonials'),
                        'singular_label' => __('Testimonial'),
                        'public' => true,
-                       'rewrite' => array('slug' => 'testimonials'), // modify the page slug / permalink
+                       'rewrite' => array('slug' => 'oj_testimonials'), // modify the page slug / permalink
                        'show_ui' => true,
                        'capability_type' => 'post',
                        'hierarchical' => false, //it means we cannot have parent and sub pages

@@ -18,7 +18,7 @@
       <div id="content-area" class="clearfix">
         <div id="post-entries">
           <?php if (have_posts()) : while (have_posts()) : the_post(); 
-          if( $post->ID == $do_not_duplicate ) continue; update_post_caches($posts); ?>
+          if( $post->ID == '' ) continue; update_post_caches($posts); ?>
           <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
             <div class="meta clearfix">
               <h5 class="storytitle"><?php the_title(); ?></h5>

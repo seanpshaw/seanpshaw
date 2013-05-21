@@ -85,6 +85,13 @@ body {
   }
 }
 
+#press-wrapper {
+  p {
+    text-align: center;
+    padding: 0;
+  }
+}
+
 // TESTIMONIALS 
 #testimonials-wrapper {
   text-align: center;
@@ -107,6 +114,19 @@ body {
     text-align: right;
     font-style: italic;
     color: $site-red;
+  }
+}
+
+body.page-id-391 {
+  #testimonials-wrapper {
+    .testimonial {
+      width: 100%;
+      min-height: inherit;
+      margin-bottom: 0;
+    }
+    h3 {
+      text-align: center;
+    }
   }
 }
 
@@ -195,18 +215,22 @@ body.blog {
       height: 23px;
       border: 1px solid #ccc;
       padding-left: 5px;
+      display: inline-block;
     }
-    input.sbutton {
+    input#mc-embedded-subscribe {
       width: 25%;
       height: 25px;
       background: $site-red;
       text-transform: lowercase;
-      top: -1px;
+      top: -3px;
       cursor: pointer;
       position: relative;
       color: white;
       @include font-courier;
       border: 1px solid lighten($site-red, 9%);
+      display: inline-block;
+      text-align: left;
+      padding: 0 0 0 7px;
       &:hover {
         background: lighten($site-red, 9%);
       }

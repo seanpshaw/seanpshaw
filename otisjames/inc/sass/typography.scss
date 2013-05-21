@@ -11,13 +11,13 @@ H1, H2, H3, H4, H5, H6 {
 }
 
 H1 {
-  font-size: 33px;
-  font-size: 3.3rem;
-  line-height: 33px;
-  line-height: 3.3rem;
+  font-size: 23px;
+  font-size: 2.3rem;
+  line-height: 23px;
+  line-height: 2.3rem;
   text-align: center;
   padding: 10px 0 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 body.home {
@@ -27,21 +27,21 @@ body.home {
 }
   
 H2 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 20px;
+  font-size: 2.0rem;
 }
 H3 {
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   color: $site-red;
 }
 H4 {
-  font-size: 21px;
-  font-size: 2.1rem;
+  font-size: 17px;
+  font-size: 1.7rem;
 }
 H5 {
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 H6 {
   font-size: 14px;
@@ -58,9 +58,14 @@ p {
   font-weight: 400;
 }
 
+.content-wrapper p, .content-wrapper h3 {
+  text-align: justify;
+  padding: 0 50px;
+}
+
 a:link, a:visited {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   @include font-courier;
   color: $site-red;
 }

@@ -1,4 +1,5 @@
 <?php function scm_head() { ?>
+  <meta name="viewport" content="width=1024">
   <link rel="shortcut icon" href="<?php echo bloginfo('stylesheet_directory'); ?>/inc/images/favicon.png" type="image/x-icon" />
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,700,800|Alegreya:400,700' rel='stylesheet' type='text/css'>
 <?php }
@@ -40,7 +41,9 @@ add_action('wp_head', 'scm_head');
         <?php } ?>
 
         <h1><?php the_title(); ?></h1>
-        <?php the_content(); ?>
+        <div class="content-wrapper">
+          <?php the_content(); ?>
+        </div>
 
         <?php if (is_page(array(11, 'testimonials'))) { ?>
           <div id="testimonials-wrapper">
@@ -54,7 +57,23 @@ add_action('wp_head', 'scm_head');
               <h3 class="testimonial-title"><?php the_title(); ?></h3>
             </div>
             <?php endwhile; ?>
-            <a href="#" class="archive-link">View All Testimonials</a> 
+            <a href="testimonial-archive" class="archive-link">View All Testimonials</a> 
+          </div>
+        <?php } ?>
+
+
+        <?php if (is_page(array(391, 'testimonials/testimonial-archive'))) { ?>
+          <div id="testimonials-wrapper">
+            <?php $i = 0; ?>
+            <?php $loop = new WP_Query( array( 'post_type' => 'testimonials', 'posts_per_page' => -1, 'order' => 'ASC') );
+                while ( $loop->have_posts() ) : $loop->the_post();
+            ?>
+            <?php $i++; ?>
+            <div id="post-<?php the_ID(); ?>" class="testimonial<?php if ($i % 2 == 0) { echo " last"; } ?>">
+              <?php the_content(); ?>
+              <h3 class="testimonial-title"><?php the_title(); ?></h3>
+            </div>
+            <?php endwhile; ?>
           </div>
         <?php } ?>
 
@@ -71,7 +90,9 @@ add_action('wp_head', 'scm_head');
                   the_post_thumbnail(); 
                 } ?>
               </div>
-              <?php the_content(); ?>
+              <div class="content-wrapper">
+                <?php the_content(); ?>
+              </div>
             </div>
             <?php endwhile; ?>
           </div>
@@ -122,15 +143,19 @@ add_action('wp_head', 'scm_head');
         <div id="email-signup">
           <h5>Cordial Dispatch:</h5>
           <p>sign up to receive regular updates on new products, special projects and offers.</p>
-          <form action="" method="post" target="_blank">
-            <input type="email" value="" name="EMAIL" class="email"  required>
-            <input type="submit" value="Subscribe" name="subscribe" class="sbutton">
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+          <form action="http://otisjamesnashville.us5.list-manage.com/subscribe/post?u=ce362508bc6f66f0542db52ac&amp;id=30b6dca267" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
           </form>
+          </div>
+          <!--End mc_embed_signup-->
         </div>
       </div>
 
       <div id="footer-bottom" class="grid-12">
-        <div class="copyright">&#169; 2013 Otis James. All rights reserved. <span><a href="/privacy-policy">Privacy Policy.</a></span>
+        <div class="copyright">&#169; 2013 Otis James. All rights reserved. <span><a href="/privacy-policy">Privacy Policy</a>.</span>
         <span> | site by Sean Shaw</div>
       </div> 
     </footer>
