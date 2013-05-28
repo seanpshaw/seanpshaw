@@ -109,6 +109,11 @@ body.page-id-391 #testimonials-wrapper h3 {
   text-align: center;
 }
 
+body.page-id-417 .content-wrapper p, body.page-id-417 .content-wrapper h3 {
+  text-align: center;
+  padding: 0;
+}
+
 body.blog .row .grid-8 {
   width: 65.1%;
 }
@@ -238,4 +243,11 @@ body.blog .row .grid-8 {
   font-size: 11px;
   font-size: 1.1rem;
   font-family: "Courier New", Courier, monospace;
+}
+
+html.ie9 #footer-wrapper #email-signup input.email, html.lt-ie9 #footer-wrapper #email-signup input.email {
+  width: 67%;
+}
+html.ie9 #footer-wrapper #email-signup input#mc-embedded-subscribe, html.lt-ie9 #footer-wrapper #email-signup input#mc-embedded-subscribe {
+  width: 29%;
 }
