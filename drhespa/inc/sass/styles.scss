@@ -1,0 +1,263 @@
+@import "mixins";
+
+.row {
+  max-width: 940px;
+}
+
+body {
+  background: url(../images/bg_body.jpg) repeat 0 0;
+}
+
+#header-wrapper {
+  border-top: 10px solid $site-purple;
+}
+
+header {
+  padding: 25px 0 0px;
+  background: white;
+}
+
+#logo {
+  padding-left: 25px;
+}
+
+#slogan {
+  @include font-inika;
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: $site-purple;
+  line-height: 28px;
+  line-height: 2.8rem;
+  text-align: center;
+  max-width: 315px;
+  float: right;
+  padding: 15px 25px 0 0;
+}
+
+#primary-navigation-wrapper {
+  clear: both;
+  padding-top: 20px;
+  ul {
+    display: table;
+    width: 100%;
+    background: $site-purple;
+    margin-bottom: 0;
+    padding: 10px 0;
+    li {
+      display: table-cell;
+      font-size: 16px;
+      font-size: 1.6rem;
+      a {
+        display: block;
+        text-align: center;
+        margin: 0 5px;
+        color: white;
+        text-transform: uppercase;
+        @include font-inika;
+      }
+      a:hover {
+        text-decoration: none;
+        color: lighten($site-purple, 45%);
+      }
+    }
+  }
+}
+
+.orbit-bullets {
+  bottom: -15px;
+  left: 90%;
+  li {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 10px;
+    &.active {
+      background: #555;
+    }
+  }
+}
+#footer-wrapper {
+  footer {
+    border-top: 3px solid $site-purple;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    a:link, a:visited {
+      color: #2b2b2b;
+    }
+    .footer-link-two {
+      background: url(../images/bg_footer_nav.png) no-repeat 0 50%;
+      padding-left: 13px;
+      margin-left: 2px;
+    }
+    .menu-primary-menu-container {
+      ul {
+        margin-bottom: 0;
+      }
+      li {
+        display: inline-block;
+        background: url(../images/bg_footer_nav.png) no-repeat 0 50%;
+        text-transform: lowercase;
+        padding-left: 13px;
+        margin-left: 2px;
+        margin-bottom: 5px;
+        &:first-child {
+          padding-left: 0;
+          margin-left: 0;
+          background: transparent;
+        }
+      }
+    }
+    .copyright {
+      font-weight: bold;
+      text-transform: lowercase;
+      margin-top: 5px;
+      color: #2b2b2b;
+    }
+  }
+}
+
+div.timer {
+  z-index: -1;
+}
+div.orbit.with-bullets {
+  margin-bottom: 0px;
+}
+
+body.home {
+  #content {
+    border-top: 2px solid white;
+  }
+}
+
+.mini-banner {
+  display: inline;
+  border-left: 1px solid white;
+  border: 0 none;
+  width: 233px;
+  &:first-child {
+    border-left: 0 none;
+  }
+}
+
+#content {
+  position: relative;
+}
+
+.prev, .next {
+  position: absolute;
+  text-indent: -1000px;
+  display: block;
+  width: 20px;
+  height: 117px;
+  top: 0;
+  z-index: 100;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.prev {
+  background: url(../images/bg_control_prev.png) no-repeat 0 0;
+  left: 0;
+  &.disabled {
+    display: none;
+  }
+}
+
+.next {
+  background: url(../images/bg_control_next.png) no-repeat 0 0;
+  right: 0;
+  &.disabled {
+    display: none;
+  }
+}
+
+// .caroufredsel_wrapper {
+//   width: 940px !important;
+//   position: relative;
+//   height: auto !important;
+//   #mini-banners {
+//     height: auto !important;
+//     li {
+//       height: auto !important;
+//     }
+//   }
+// }
+
+.caroufredsel_wrapper {
+  width: 940px !important;
+  li {
+    position: relative;
+  }
+}
+
+#main-content {
+  ul#mini-banners {
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0;
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 0px;
+  background-color: black;
+  opacity: 0.8;
+  width: 233px;
+  p {
+    padding: 5px 0 9px 10px;
+    line-height: normal;
+    margin-bottom: 0;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+#links {
+  margin-top: 5px;
+  float: right;
+}
+
+.facebook, .twitter, .youtube, .google {
+  display: inline-block;
+  width: 24px;
+  height: 34px;
+  text-indent: -1000px;
+  overflow: hidden;
+  background: url(../images/sprite_social.png) no-repeat 0 0;
+}
+
+.facebook {
+  &:hover {
+    background-position: 0 -40px;
+  }
+}
+
+.twitter {
+  background-position: -31px 0px;
+  width: 40px;
+  &:hover {
+    background-position: -31px -40px;
+  }
+}
+
+.google {
+  background-position: -68px 0px;
+  width: 40px;
+  &:hover {
+    background-position: -68px -40px;
+  }
+}
+
+.youtube {
+  background-position: -107px 0px;
+  width: 33px;
+  &:hover {
+    background-position: -107px -40px;
+  }
+}

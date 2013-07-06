@@ -1,0 +1,44 @@
+// COLORS
+$site-main: #303030;
+$site-darkgrey: #303030;
+$site-blue: #7cc0e5;
+$site-red: #9d182d;
+
+$site-purple: #613376;
+
+// MIXINS
+@mixin font-helvetica {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin font-inika {
+  font-family: 'Inika', "Times New Roman", Times, serif;
+}
+
+@mixin font-century-gothic {
+  font-family: "Century Gothic", Helvetica, Arial, sans-serif;
+}
+
+@mixin border-radius($amt) {
+  -moz-border-radius: $amt;
+  -webkit-border-radius: $amt;
+  border-radius: $amt;
+}
+
+@mixin box-shadow($x_offset: 1px, $y_offset: 2px, $blur: 5px, $color: rgba(0,0,0,0.4)) {
+  -moz-box-shadow: $x_offset $y_offset $blur $color;
+  -webkit-box-shadow: $x_offset $y_offset $blur $color;
+  box-shadow: $x_offset $y_offset $blur $color;
+}
+
+@mixin button {
+  background: url(../images/bg_button.png) repeat-x 0 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "Century Gothic", Helvetica, Arial, sans-serif !important;
+  padding: 5px 10px;
+  max-height: 33px;
+  border-radius: 4px;
+}
