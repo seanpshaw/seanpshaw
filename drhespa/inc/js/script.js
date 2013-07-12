@@ -2,19 +2,6 @@ jQuery(function($) {
 
   $('#featured').orbit();
 
-  // $("#mini-banners").simplecarousel({
-  //     next: $('.next'),
-  //     prev: $('.prev'),
-  //     slidespeed: 700,
-  //     auto: 5000,
-  //     width: 235,
-  //     height: 117,
-  //     visible: 4,
-  //     items: 8, 
-  //     noloop: false, 
-  //     jump: 1
-  // });
-
   $("#mini-banners").carouFredSel({
     items           : 4,
     height          : 117,
@@ -33,7 +20,7 @@ jQuery(function($) {
       key   : "right"
     },  
     auto  : { 
-      play  : false
+      play  : true
     }       
   });
 
@@ -43,6 +30,16 @@ jQuery(function($) {
      $(this).find(".banner-text").show();
   },function(){
      $(this).find(".banner-text").hide();
+  });
+
+  $('.accordion-inner').hide();
+  $('.accordion h3:first').addClass("active");
+  $('.accordion .accordion-inner:first').show();
+
+  $(".accordion h3").click(function(){
+    $(this).toggleClass("active");
+    $(this).next(".accordion .accordion-inner").slideToggle("fast");
+      return true;
   });
 
 });

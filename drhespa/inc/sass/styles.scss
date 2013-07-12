@@ -8,6 +8,11 @@ body {
   background: url(../images/bg_body.jpg) repeat 0 0;
 }
 
+#content-inner {
+  background: white;
+  padding: 0 20px 10px 20px;
+}
+
 #header-wrapper {
   border-top: 10px solid $site-purple;
 }
@@ -59,6 +64,11 @@ header {
         text-decoration: none;
         color: lighten($site-purple, 45%);
       }
+      &.current-menu-item {
+        a:link, a:visited {
+          color: lighten($site-purple, 45%);
+        }
+      }
     }
   }
 }
@@ -76,12 +86,47 @@ header {
     }
   }
 }
+
+body.home {
+  #footer-wrapper {
+    footer {
+      margin-top: 10px;
+    }
+  }
+}
+
+// HEALTHY SKIN SECTION
+body.page-id-43 {
+  #content-inner {
+    padding-bottom: 20px;
+  }
+  #accordion-section {
+    margin-top: 25px;
+    h3 {
+      font-weight: normal;
+      color: white;
+      background: url(../images/bg_accordion_control.png) no-repeat 98% 8px $site-purple;
+      border-bottom: 1px solid white;
+      cursor: pointer;
+      padding: 5px 5px 5px 15px;
+      text-transform: uppercase;
+      &.active {
+        border-bottom: 0 none;
+        background-position: 98% -22px;
+      }
+    }
+    .accordion-inner {
+      padding: 10px 15px 5px;
+      background: #e8e8e8;
+    }
+  }
+}
+
 #footer-wrapper {
   footer {
     border-top: 3px solid $site-purple;
-    padding-top: 10px;
     padding-bottom: 30px;
-    margin-top: 10px;
+    padding-top: 10px;
     a:link, a:visited {
       color: #2b2b2b;
     }

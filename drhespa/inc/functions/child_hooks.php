@@ -47,6 +47,16 @@ add_action('wp_head', 'scm_favicon');
     </section>
   <?php } ?>
 
+  <?php if (!is_front_page() ) { ?>
+    <section id="featured-content" class="container hide-on-phones">
+      <div id="top-container" class="row">          
+        <div id="featured">
+          <?php if(has_post_thumbnail()) { the_post_thumbnail(); } ?>
+        </div>
+      </div>
+    </section>
+  <?php } ?>
+
   <div id="main-content" class="container">
     <div id="content" class="row clearfix">
       <?php if (is_front_page() ) { ?>
@@ -64,6 +74,24 @@ add_action('wp_head', 'scm_favicon');
           <?php endwhile; wp_reset_postdata(); ?>
         </ul>
         <div class="next">Next</div>
+      <?php } ?>
+      <?php if (!is_front_page() ) { ?>
+        <div id="content-inner">
+          <h1><?php the_title(); ?></h1>
+          <?php the_content(); ?>
+          
+          <?php $posts = get_field('accordion_relationship');
+          if( $posts ): ?>
+            <div id="accordion-section" class="accordion">
+              <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                <?php setup_postdata($post); ?>
+                <h3><?php the_field('accordion_title', $post->ID); ?></h3>
+                <div class="accordion-inner"><?php the_content(); ?></div>
+              <?php endforeach; ?>
+            </div>
+          <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+          <?php endif; ?>
+        </div>
       <?php } ?>
 
     </div>

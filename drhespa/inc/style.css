@@ -1,0 +1,14 @@
+/*
+THEME NAME: Dr. He Spa
+DESCRIPTION: A custom theme for Alpha Construction
+VERSION: 1.0
+AUTHOR: @spshaw
+TEMPLATE: heisenberg
+*/
+/* Import parent styles */
+
+@import url(../heisenberg/style.css);
+@import url('inc/css/typography.css');
+@import url('inc/css/styles.css');
+@import url('inc/css/mobile.css');
+@import url('inc/css/ie.css');

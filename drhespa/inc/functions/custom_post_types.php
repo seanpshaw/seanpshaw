@@ -103,4 +103,47 @@ function post_type_minibanners() {
 }
 add_action('init', 'post_type_minibanners'); // Change to match custom content name
 
+// Accordion Content ////////////////////
+
+function post_type_accordion_content() {
+
+   register_post_type(
+               'accordion_content',
+               array('label' => __('Accordion Content'),
+                       'singular_label' => __('Accordion Content'),
+                       'public' => true,
+                       'rewrite' => array('slug' => 'accordion-content'), // modify the page slug / permalink
+                       'show_ui' => true,
+                       'capability_type' => 'post',
+                       'hierarchical' => false, //it means we cannot have parent and sub pages
+                       'query_var' => false,
+                       'exclude_from_search' => true,
+                       'supports' => array(
+                                           'title', // entry title
+                                           'thumbnail', // featured image
+                                           'editor', //standard wysywig editor
+                                           'page-attributes'),
+                       'labels' => array(
+                                           'name' => __( 'Accordion Content' ),
+                                           'singular_name' => __( 'Accordion Content' ),
+                                           'add_new' => __( 'Add New' ),
+                                           'add_new_item' => __( 'Add New Accordion Content' ),
+                                           'edit' => __( 'Edit' ),
+                                           'edit_item' => __( 'Edit Accordion Content' ),
+                                           'new_item' => __( 'New Accordion Content' ),
+                                           'view' => __( 'View Accordion Content' ),
+                                           'view_item' => __( 'View Accordion Content' ),
+                                           'search_items' => __( 'Search Accordion Content' ),
+                                           'not_found' => __( 'No Accordion Content Found' ),
+                                           'not_found_in_trash' => __( 'No Accordion Content Found in Trash' ),
+                                           'parent' => __( 'Parent Accordion Content' )
+                       )
+               )
+
+   );
+
+   register_taxonomy_for_object_type('post_tag', 'accordion_content'); // Change to match custom content name
+}
+add_action('init', 'post_type_accordion_content'); // Change to match custom content name
+
 ?>
